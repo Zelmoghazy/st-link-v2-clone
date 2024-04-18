@@ -22,6 +22,7 @@
        style="border-radius: 30px;"/>
 </p>
 
+* You need another st-link to flash the bricked one
 * Using a multimeter continuity test I was able to figure out the debugging pins 
     * I know its tempting to use the ones at the end, but it wont work ! you need to use the debugging pins
     * since only the SWDIO and SWCLK are needed you can use the 3.3v and gnd from the back I used jumper wires and alligned them with debugging pins without soldering or anything , it took some getting used to but it would work you just need steady hands and someone to help you.
