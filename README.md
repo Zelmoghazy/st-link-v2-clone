@@ -80,10 +80,15 @@ openocd -f interface/stlink-v2.cfg -f .\myconfig.cfg -c "init" -c "halt" -c "fla
 1. Use STLinkReflash (Version 190812)
     - only use this version (included in the repo)
 2. Modify the following offsets in STLinkReflash.exe or use the included prepatched version
+
   2566 3C > 38
+
   2567 40 > C0
+
   26B2 3C > 38
+
   26B3 4A > C0
+  
 3. Run STLinkReflash.exe and accept, selecting option 1.
 
 <p align="center">
