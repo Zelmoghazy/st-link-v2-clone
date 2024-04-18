@@ -1,1 +1,0 @@
-https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/
