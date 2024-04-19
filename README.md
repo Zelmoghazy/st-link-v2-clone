@@ -1,4 +1,4 @@
-## Program/Recover Chinese Clone of the stlinkv2
+## How to Program and Recover Chinese Clone of the st-link v2
 
 * I accidentally bricked my st-link clone while trying to update the firmware
 
@@ -8,8 +8,9 @@
        style="border-radius: 30px;"/>
 </p>
 
-* I found it was powered by a chinese STM32 Clone called MH2103A-CBT6
+* I found it was powered by a chinese STM32 Clone called MH2103A CBT6
     * It is supposed to be a pin to pin clone of the STM32F103
+
 <p align="center">
   <img src="./Images/chrome_SuSKcdilPA.png"
        width="100%" 
@@ -34,6 +35,9 @@
        style="border-radius: 30px;"/>
 </p>
 
+## Programming Steps
+
+* **Note :** After each step unplug the programmer from the usb and put it again.
 
 1- unlock the flash on device (configuration is included in the repo)
 
@@ -45,13 +49,15 @@ openocd -f interface/stlink-v2.cfg -f .\myconfig.cfg -c "init" -c "halt" -c "stm
 ```
 st-flash erase
 ```
+* The st-link power led will stop working at this stage, dont worry 
 
 3- flash the st-link bootloader
+
 ```
 openocd -f interface/stlink-v2.cfg -f .\myconfig.cfg -c "init" -c "halt" -c "flash write_image erase Unprotected-2-1-Bootloader.bin 0x08000000" -c "shutdown"
 ```
 
-4- open included st-link utility version (you need an old version newer versions doesnt work)
+4- Open included st-link utility version (you need an old version newer versions doesnt work)
 
 <p align="center">
   <img src="./Images/STM32_ST-LINK_Utility_QT9ZmOM1gl.png"
@@ -76,19 +82,19 @@ openocd -f interface/stlink-v2.cfg -f .\myconfig.cfg -c "init" -c "halt" -c "fla
 
 ## Convert ST-Link clone to J-Link
 
-* Note : This procedure may brick your st-link clone and you would need to reflash it, so it advisable to have 2 st-link clones so if you brick one you can reflash with the other.
+* **Note :** This procedure may brick your st-link clone and you would need to reflash it, so it advisable to have 2 st-link clones so if you brick one you can reflash with the other.
 1. Use STLinkReflash (Version 190812)
     - only use this version (included in the repo)
 2. Modify the following offsets in STLinkReflash.exe or use the included prepatched version
 
-  2566 3C > 38
+    2566 3C > 38
 
-  2567 40 > C0
+    2567 40 > C0
 
-  26B2 3C > 38
+    26B2 3C > 38
 
-  26B3 4A > C0
-  
+    26B3 4A > C0
+
 3. Run STLinkReflash.exe and accept, selecting option 1.
 
 <p align="center">
@@ -104,7 +110,7 @@ openocd -f interface/stlink-v2.cfg -f .\myconfig.cfg -c "init" -c "halt" -c "fla
        style="border-radius: 30px;"/>
 </p>
 
-* SEGGER system view can be used with it 
+* SEGGER System View can be used with it 
 
 <p align="center">
   <img src="./Images/SystemView_9ZcV2Ncmvv.png"
