@@ -1,14 +1,12 @@
 ## How to Program and Recover Chinese Clone of the st-link v2
 
-* I accidentally bricked my st-link clone while trying to update the firmware
-
 <p align="center">
   <img src="./Images/A611cf33089f74830b00823becb2412c8A.webp"
        width="35%" 
        style="border-radius: 30px;"/>
 </p>
 
-* I found it was powered by a chinese STM32 Clone called MH2103A CBT6
+* My version of the st-link clone is powered by a chinese STM32 Clone called MH2103A CBT6
     * It is supposed to be a pin to pin clone of the STM32F103
 
 <p align="center">
@@ -23,7 +21,7 @@
        style="border-radius: 30px;"/>
 </p>
 
-* You need another st-link to flash the bricked one
+* You need another st-link to flash the one you want to program.
 * Using a multimeter continuity test I was able to figure out the debugging pins 
     * I know its tempting to use the ones at the end, but it wont work ! you need to use the debugging pins
     * since only the SWDIO and SWCLK are needed you can use the 3.3v and gnd from the back I used jumper wires and alligned them with debugging pins without soldering or anything , it took some getting used to but it would work you just need steady hands and someone to help you.
