@@ -24,11 +24,19 @@
 * You need another st-link to flash the one you want to program.
 * Using a multimeter continuity test I was able to figure out the debugging pins 
     * I know its tempting to use the ones at the end, but it wont work ! you need to use the debugging pins
-    * since only the SWDIO and SWCLK are needed you can use the 3.3v and gnd from the back I used jumper wires and alligned them with debugging pins without soldering or anything , it took some getting used to but it would work you just need steady hands and someone to help you.
 
 
 <p align="center">
   <img src="./Images/ST LINK Stlink ST-Link V2 Mini STM8 STM32 JTAG.jpg"
+       width="100%" 
+       style="border-radius: 30px;"/>
+</p>
+
+* Since only the `SWDIO` and `SWCLK` are really needed you can use the `3.3v` and `GND` from the back.
+* I used regular jumper wires and aligned them carefully with the debugging pins without soldering or anything, it took some getting used to but it would work you just need steady hands and someone to help you, you may need to try a couple of times until it works.
+
+<p align="center">
+  <img src="./Images/74893489-fb9a-4122-87fd-692f8c32d4f3.jpg"
        width="100%" 
        style="border-radius: 30px;"/>
 </p>
@@ -108,7 +116,7 @@ openocd -f interface/stlink-v2.cfg -f .\myconfig.cfg -c "init" -c "halt" -c "fla
        style="border-radius: 30px;"/>
 </p>
 
-* SEGGER System View can be used with it 
+* SEGGER SystemView can be used with it, I tried it with the Blue Pill and FreeRTOS and it works! .
 
 <p align="center">
   <img src="./Images/SystemView_9ZcV2Ncmvv.png"
