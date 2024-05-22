@@ -116,7 +116,10 @@ openocd -f interface/stlink-v2.cfg -f .\myconfig.cfg -c "init" -c "halt" -c "fla
        style="border-radius: 30px;"/>
 </p>
 
-* SEGGER SystemView can be used with it, I tried it with the Blue Pill and FreeRTOS and it works! .
+## SEGGER SystemView 
+
+* SEGGER SystemView can be used with it, I tried it with the Blue Pill and FreeRTOS and it works!.
+    * You can find an example project here [SystemView Integration STM32](https://github.com/Zelmoghazy/STM32-FreeRTOS-Template/tree/c2c53b06abea6a6ee28840377d7460c7650e4239/SystemView_Integration)
 
 <p align="center">
   <img src="./Images/SystemView_9ZcV2Ncmvv.png"
