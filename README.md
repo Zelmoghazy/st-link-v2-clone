@@ -55,7 +55,7 @@ openocd -f interface/stlink-v2.cfg -f .\myconfig.cfg -c "init" -c "halt" -c "stm
 ```
 st-flash erase
 ```
-* The st-link power led will stop working at this stage, dont worry 
+* The st-link power LED will stop working at this stage, dont worry. 
 
 3- flash the st-link bootloader
 
@@ -89,6 +89,10 @@ openocd -f interface/stlink-v2.cfg -f .\myconfig.cfg -c "init" -c "halt" -c "fla
 ## Convert ST-Link clone to J-Link
 
 * **Note :** This procedure may brick your st-link clone and you would need to reflash it, so it advisable to have 2 st-link clones so if you brick one you can reflash with the other.
+* If you get an error that st-link firmware is unsupported, flash the included firmware backup `STLinkV2.J16.S4.bin` using the same method described above.
+
+### Steps :
+
 1. Use STLinkReflash (Version 190812)
     - only use this version (included in the repo)
 2. Modify the following offsets in STLinkReflash.exe or use the included prepatched version
